@@ -9,7 +9,8 @@
       "Bash(curl:*)",
       "Bash(npm run install:all:*)",
       "Bash(lsof:*)",
-      "Bash(xargs kill -9)"
+      "Bash(xargs kill -9)",
+      "Bash(mkdir:*)"
     ]
   }
 }
