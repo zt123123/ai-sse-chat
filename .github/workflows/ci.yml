@@ -23,8 +23,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install all dependencies
-        run: npm run install:all
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install backend dependencies
+        working-directory: ./backend
+        run: npm ci
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm ci
 
       - name: Build backend
         working-directory: ./backend
