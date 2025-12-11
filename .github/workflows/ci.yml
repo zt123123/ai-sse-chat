@@ -22,18 +22,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
 
-      - name: Install root dependencies
-        run: npm ci
-
-      - name: Install backend dependencies
-        working-directory: ./backend
-        run: npm ci
-
-      - name: Install frontend dependencies
-        working-directory: ./frontend
-        run: npm ci
+      - name: Install all dependencies
+        run: npm run install:all
 
       - name: Build backend
         working-directory: ./backend

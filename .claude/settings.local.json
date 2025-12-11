@@ -10,7 +10,8 @@
       "Bash(npm run install:all:*)",
       "Bash(lsof:*)",
       "Bash(xargs kill -9)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }
